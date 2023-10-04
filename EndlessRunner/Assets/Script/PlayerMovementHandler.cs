@@ -46,7 +46,7 @@ public class PlayerMovementHandler : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Pressed Space");
+            //Debug.Log("Pressed Space");
             if (canJump)
             {
                 jumping = true;
@@ -58,7 +58,7 @@ public class PlayerMovementHandler : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && jumping)
         {
             jumping = true;
-            Debug.Log("Holding down space");
+            //Debug.Log("Holding down space");
         }
         else
         {
@@ -83,7 +83,7 @@ public class PlayerMovementHandler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("HitGround");
+            //Debug.Log("HitGround");
             canJump = true;
         }
     }
