@@ -5,10 +5,15 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int playerHealth;
+
+    private GameManager gm;
+
+    public GameObject gameManager;
     // Start is called before the first frame update
     void Start()
     {
         playerHealth = 4;
+        gm = gameManager.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -22,9 +27,19 @@ public class PlayerHealth : MonoBehaviour
         if(playerHealth == 4)
         {
             playerHealth--;
-            GameObject destroyObj;
-            destroyObj = GameObject.FindGameObjectWithTag("Lifebar4");
-            Destroy(destroyObj);
+            gm.takeHealthBar(4);
+        } else if(playerHealth == 3)
+        {
+            playerHealth--;
+            gm.takeHealthBar(3);
+        } else if(playerHealth == 2)
+        {
+            playerHealth--;
+            gm.takeHealthBar(2);
+        } else if(playerHealth == 1)
+        {
+            playerHealth--;
+            gm.takeHealthBar(1);
         }
     }
 }
