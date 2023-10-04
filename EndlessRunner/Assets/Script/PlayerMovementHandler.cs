@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class PlayerMovementHandler : MonoBehaviour
     public float jumpForce;
     public int minJumpVal;
     public int maxJumpVal;
+    private bool canJump;
 
     public float movementSpeed;
 
@@ -19,6 +21,7 @@ public class PlayerMovementHandler : MonoBehaviour
     {
         playerRigidBody = GetComponent<Rigidbody2D>();
         jumping = false;
+        canJump = true;
     }
 
     //FixedUpdate is used for physics
@@ -41,9 +44,21 @@ public class PlayerMovementHandler : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         flipPlayer();
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Pressed Space");
+            if (canJump)
+            {
+                jumping = true;
+                canJump = false;
+            }
+        }
+        
+        
+        if (Input.GetKey(KeyCode.Space) && jumping)
         {
             jumping = true;
+            Debug.Log("Holding down space");
         }
         else
         {
@@ -61,6 +76,15 @@ public class PlayerMovementHandler : MonoBehaviour
         else if (horizontalInput < 0)
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            Debug.Log("HitGround");
+            canJump = true;
         }
     }
 }
