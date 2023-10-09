@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Damager
   - Lifebar4
+  - ObjectDestroyer
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovementHandler : MonoBehaviour
 {
     private Rigidbody2D playerRigidBody;
+    public GameObject boundary;
     private float horizontalInput;
     private int jumpTime;
     private bool jumping;
@@ -28,6 +29,8 @@ public class PlayerMovementHandler : MonoBehaviour
     void FixedUpdate()
     {
         playerRigidBody.velocity = new Vector2(horizontalInput * movementSpeed, playerRigidBody.velocity.y);
+        //move the boundary with the player
+
         
         if((jumping && jumpTime < maxJumpVal) || jumpTime < minJumpVal)
         {
