@@ -20,7 +20,7 @@ public class WallManager : MonoBehaviour
         //Debug.Log("Time: " + time);
         // wait a few seconds before moving the wall
         // this will also be used to increase the wall speed as time goes on
-        if (seconds >= 3)
+        if (seconds >= 4)
         {
             wallRigidBody.AddForce(transform.right * wallMovementSpeed);
         }
@@ -32,14 +32,5 @@ public class WallManager : MonoBehaviour
     {
         timer += Time.deltaTime;
         seconds = (int)(timer % 60);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // End Game
-            //Debug.Log("Collided with player - ending game");
-        }
     }
 }

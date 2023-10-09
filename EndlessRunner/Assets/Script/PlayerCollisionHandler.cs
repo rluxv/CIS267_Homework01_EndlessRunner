@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollisionHandler : MonoBehaviour
 {
@@ -24,6 +25,16 @@ public class PlayerCollisionHandler : MonoBehaviour
         if (collision.gameObject.CompareTag("Damager"))
         {
             GetComponent<PlayerHealth>().takeDamage();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // we assign the wall tag to the water below the player as well
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            // end game instantly
+           // SceneManager.LoadScene("MainMenu");
         }
     }
 }
