@@ -7,6 +7,7 @@ public class TerrainGenerator : MonoBehaviour
     private const float PLAYER_DISTANCE_SPAWN_TERRAIN = 50f;
     [SerializeField] private Transform terrainStart;
     [SerializeField] private Transform Terrain1;
+    [SerializeField] private List<Transform> terrainTList;
     [SerializeField] private GameObject player;
     private Vector3 lastEndPos;
     void Start()
@@ -28,13 +29,14 @@ public class TerrainGenerator : MonoBehaviour
 
     private void spawnTerrain()
     {
-        Transform lastTerrainTFM = spawnTerrain(lastEndPos);
+        Transform terrainToSpawn = terrainTList[Random.Range(0, terrainTList.Count)];
+        Transform lastTerrainTFM = spawnTerrain(terrainToSpawn, lastEndPos);
         lastEndPos = new Vector3(lastTerrainTFM.Find("EndPos").position.x + 10, lastTerrainTFM.Find("EndPos").position.y);
     }
 
-    private Transform spawnTerrain(Vector3 position)
+    private Transform spawnTerrain(Transform terrain, Vector3 position)
     {
-        Transform terrainTFM = Instantiate(Terrain1, position, Quaternion.identity);
+        Transform terrainTFM = Instantiate(terrain, position, Quaternion.identity);
         return terrainTFM;
     }
 }
