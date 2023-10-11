@@ -6,7 +6,6 @@ public class TerrainGenerator : MonoBehaviour
 {
     private const float PLAYER_DISTANCE_SPAWN_TERRAIN = 50f;
     [SerializeField] private Transform terrainStart;
-    [SerializeField] private Transform Terrain1;
     [SerializeField] private List<Transform> terrainTList;
     [SerializeField] private GameObject player;
     private Vector3 lastEndPos;
