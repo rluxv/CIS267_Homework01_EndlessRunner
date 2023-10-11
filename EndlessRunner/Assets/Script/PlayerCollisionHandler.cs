@@ -33,8 +33,7 @@ public class PlayerCollisionHandler : MonoBehaviour
         // we assign the wall tag to the water below the player as well
         if (collision.gameObject.CompareTag("Wall"))
         {
-            // end game instantly
-           // SceneManager.LoadScene("MainMenu");
+            gm.gameOver();
         }
     }
 }

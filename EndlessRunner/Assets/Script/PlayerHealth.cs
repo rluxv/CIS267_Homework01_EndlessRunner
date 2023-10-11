@@ -40,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
         {
             playerHealth--;
             gm.takeHealthBar(1);
+            gm.gameOver();
         }
     }
 }

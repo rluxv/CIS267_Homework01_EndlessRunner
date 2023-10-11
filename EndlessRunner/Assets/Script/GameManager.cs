@@ -11,10 +11,12 @@ public class GameManager : MonoBehaviour
     public GameObject lifebar3;
 
     public GameObject lifebar4;
+    public GameObject Canvas;
+    public bool isGameOver;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isGameOver = false;
     }
 
     // Update is called once per frame
@@ -40,6 +42,25 @@ public class GameManager : MonoBehaviour
         if (num == 4)
         {
             Destroy(lifebar4);
+        }
+    }
+
+    public void gameOver()
+    {
+        Canvas.GetComponent<GameOverMenu>().showGameOverMenu();
+        isGameOver = true;
+        evalGameState();
+    }
+
+    public void evalGameState()
+    {
+        if (isGameOver)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
         }
     }
 }
