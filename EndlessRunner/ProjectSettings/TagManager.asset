@@ -9,6 +9,7 @@ TagManager:
   - Damager
   - Lifebar4
   - ObjectDestroyer
+  - Spike
   layers:
   - Default
   - TransparentFX

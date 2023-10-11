@@ -437,9 +437,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425917667}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.57, y: 0.74, z: 0}
-  m_LocalScale: {x: 0.3144333, y: 9.056031, z: 1}
+  m_LocalScale: {x: 0.3144333, y: 39.13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -528,7 +528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017bb0e7139120d9896c6db042742e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallMovementSpeed: 1.5
+  wallMovementSpeed: 0.1
+  player: {fileID: 1140767199}
 --- !u!1 &544734171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1625,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrainStart: {fileID: 767745388}
-  Terrain1: {fileID: 6718313707735750941, guid: bdee48f3f4cab3b4aa5e88257f63ae6a, type: 3}
   terrainTList:
   - {fileID: 6089661611840299103, guid: b3ebc855b2a273b4daaba446bcd2b836, type: 3}
   - {fileID: 6718313707735750941, guid: bdee48f3f4cab3b4aa5e88257f63ae6a, type: 3}
@@ -2756,9 +2756,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 193854922}
   - {fileID: 1140767203}
-  - {fileID: 425917669}
   - {fileID: 1007637561}
   - {fileID: 1264586571}
+  - {fileID: 425917669}
   - {fileID: 544734175}
   - {fileID: 546499662}
   - {fileID: 1826863095}

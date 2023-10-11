@@ -7,6 +7,7 @@ public class WallManager : MonoBehaviour
 {
     private Rigidbody2D wallRigidBody;
     public float wallMovementSpeed;
+    public GameObject player;
     float timer = 0.0f;
     int seconds;
     // Start is called before the first frame update
@@ -22,8 +23,10 @@ public class WallManager : MonoBehaviour
         // this will also be used to increase the wall speed as time goes on
         if (seconds >= 4)
         {
-            wallRigidBody.AddForce(transform.right * wallMovementSpeed);
+            wallRigidBody.transform.Translate(transform.right * wallMovementSpeed);
+            transform.position = new Vector3(transform.position.x, player.transform.position.y);
         }
+
         
     }
 
