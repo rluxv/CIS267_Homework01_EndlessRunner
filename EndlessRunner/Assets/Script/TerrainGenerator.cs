@@ -11,8 +11,11 @@ public class TerrainGenerator : MonoBehaviour
     private Vector3 lastEndPos;
     void Start()
     {
-        lastEndPos = new Vector3(terrainStart.Find("EndPos").position.x + 10, terrainStart.Find("EndPos").position.y);
+        lastEndPos = new Vector3(terrainStart.Find("EndPos").position.x + 10, terrainStart.Find("EndPos").position.y + Random.Range(-3, 3));
 
+        spawnTerrain();
+        spawnTerrain();
+        spawnTerrain();
         spawnTerrain();
         spawnTerrain();
     }
@@ -30,7 +33,7 @@ public class TerrainGenerator : MonoBehaviour
     {
         Transform terrainToSpawn = terrainTList[Random.Range(0, terrainTList.Count)];
         Transform lastTerrainTFM = spawnTerrain(terrainToSpawn, lastEndPos);
-        lastEndPos = new Vector3(lastTerrainTFM.Find("EndPos").position.x + 10, lastTerrainTFM.Find("EndPos").position.y);
+        lastEndPos = new Vector3(lastTerrainTFM.Find("EndPos").position.x + 10, lastTerrainTFM.Find("EndPos").position.y + Random.Range(0, 3));
     }
 
     private Transform spawnTerrain(Transform terrain, Vector3 position)
