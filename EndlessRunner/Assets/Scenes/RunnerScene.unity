@@ -1625,6 +1625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrainStart: {fileID: 767745388}
   Terrain1: {fileID: 6718313707735750941, guid: bdee48f3f4cab3b4aa5e88257f63ae6a, type: 3}
+  player: {fileID: 1140767199}
 --- !u!1 &1423167764
 GameObject:
   m_ObjectHideFlags: 0
