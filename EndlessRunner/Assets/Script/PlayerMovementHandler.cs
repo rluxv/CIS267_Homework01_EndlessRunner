@@ -87,7 +87,11 @@ public class PlayerMovementHandler : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             //Debug.Log("HitGround");
-            canJump = true;
+            if(transform.position.y > collision.gameObject.transform.position.y)
+            {
+                canJump = true;
+            }
+            
         }
     }
 }
