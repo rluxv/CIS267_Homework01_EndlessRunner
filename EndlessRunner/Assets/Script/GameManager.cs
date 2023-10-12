@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         isGameOver = false;
+        evalGameState();
     }
 
     // Update is called once per frame
@@ -50,6 +52,13 @@ public class GameManager : MonoBehaviour
         Canvas.GetComponent<GameOverMenu>().showGameOverMenu();
         isGameOver = true;
         evalGameState();
+    }
+
+    public void restartGame()
+    {
+        isGameOver = false;
+        evalGameState();
+        SceneManager.LoadScene("RunnerScene");
     }
 
     public void evalGameState()

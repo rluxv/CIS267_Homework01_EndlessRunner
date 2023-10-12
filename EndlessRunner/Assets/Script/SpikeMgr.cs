@@ -6,7 +6,6 @@ public class SpikeMgr : MonoBehaviour
 {
     // Start is called before the first frame update
     private bool spikeShowing;
-    GameObject gameObject;
     private Vector3 startingLocation;
     private float startLocX;
     private float startLocY;
