@@ -11,7 +11,7 @@ public class TerrainGenerator : MonoBehaviour
     private Vector3 lastEndPos;
     void Start()
     {
-        lastEndPos = new Vector3(terrainStart.Find("EndPos").position.x + 10, terrainStart.Find("EndPos").position.y + Random.Range(-3, 3));
+        lastEndPos = new Vector3(terrainStart.Find("EndPos").position.x + 10, terrainStart.Find("EndPos").position.y + Random.Range(0, 3));
 
         spawnTerrain();
         spawnTerrain();

@@ -9,6 +9,8 @@ public class SpikeMgr : MonoBehaviour
     private Vector3 startingLocation;
     private float startLocX;
     private float startLocY;
+    public float timeSpikeHiding;
+    public float timeSpikeShowing;
     float timer = 0.0f;
     void Start()
     {
@@ -23,17 +25,20 @@ public class SpikeMgr : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer >= 1 && !spikeShowing)
+        if(timer >= timeSpikeHiding && !spikeShowing)
         {
             transform.position = new Vector3(transform.position.x, (float)(transform.position.y + 0.7));
             spikeShowing = true;
             timer = 0;
+            GetComponent<PolygonCollider2D>().enabled = true;
         }
-        else if (timer >= 1 && spikeShowing)
+        else if (timer >= timeSpikeShowing && spikeShowing)
         {
             transform.position = startingLocation;
             spikeShowing = false;
             timer = 0;
+            GetComponent<PolygonCollider2D>().enabled = false;
+
         }
     }
 }
