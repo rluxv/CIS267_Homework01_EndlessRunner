@@ -63,6 +63,48 @@ public class GameManager : MonoBehaviour
         Canvas.GetComponent<GameOverMenu>().showGameOverMenu();
         isGameOver = true;
         evalGameState();
+        saveHighScore();
+    }
+
+    public void saveHighScore()
+    {
+        if (score > PlayerPrefs.GetInt("HighScore1"))
+        {
+            //reorganize high scores
+            PlayerPrefs.SetInt("HighScore5", PlayerPrefs.GetInt("HighScore4"));
+            PlayerPrefs.SetInt("HighScore4", PlayerPrefs.GetInt("HighScore3"));
+            PlayerPrefs.SetInt("HighScore3", PlayerPrefs.GetInt("HighScore2"));
+            PlayerPrefs.SetInt("HighScore2", PlayerPrefs.GetInt("HighScore1"));
+            PlayerPrefs.SetInt("HighScore1", score);
+
+            
+        }
+        else if (score > PlayerPrefs.GetInt("HighScore2"))
+        {
+            //reorganize high scores
+            PlayerPrefs.SetInt("HighScore5", PlayerPrefs.GetInt("HighScore4"));
+            PlayerPrefs.SetInt("HighScore4", PlayerPrefs.GetInt("HighScore3"));
+            PlayerPrefs.SetInt("HighScore3", PlayerPrefs.GetInt("HighScore2"));
+            PlayerPrefs.SetInt("HighScore2", score);
+        }
+        else if (score > PlayerPrefs.GetInt("HighScore3"))
+        {
+            //reorganize high scores
+            PlayerPrefs.SetInt("HighScore5", PlayerPrefs.GetInt("HighScore4"));
+            PlayerPrefs.SetInt("HighScore4", PlayerPrefs.GetInt("HighScore3"));
+            PlayerPrefs.SetInt("HighScore3", score);
+        }
+        else if (score > PlayerPrefs.GetInt("HighScore4"))
+        {
+            //reorganize high scores
+            PlayerPrefs.SetInt("HighScore5", PlayerPrefs.GetInt("HighScore4"));
+            PlayerPrefs.SetInt("HighScore4", score);
+        }
+        else if (score > PlayerPrefs.GetInt("HighScore5"))
+        {
+            PlayerPrefs.SetInt("HighScore5", score);
+        }
+        //else your score is not saved :(
     }
 
     public void restartGame()
