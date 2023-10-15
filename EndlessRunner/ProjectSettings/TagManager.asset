@@ -10,6 +10,8 @@ TagManager:
   - Lifebar4
   - ObjectDestroyer
   - Spike
+  - TerrainEndScoreCollider
+  - SpikeShieldCollectible
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,11 +15,21 @@ public class GameManager : MonoBehaviour
     public GameObject lifebar4;
     public GameObject Canvas;
     public bool isGameOver;
+
+    private int score;
+    public TMP_Text scoreTMP;
+
+    //Spike Shield
+    public bool spikeShieldActive;
+    public int spikeShieldHits;
     // Start is called before the first frame update
     void Start()
     {
         isGameOver = false;
         evalGameState();
+        score = 0;
+        spikeShieldActive = false;
+        spikeShieldHits = 0;
     }
 
     // Update is called once per frame
@@ -71,5 +82,11 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+    }
+
+    public void addScore(int sc)
+    {
+        score += sc;
+        scoreTMP.text = "Score: " + score;
     }
 }

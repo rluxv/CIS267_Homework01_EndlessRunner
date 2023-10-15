@@ -84,7 +84,8 @@ public class PlayerMovementHandler : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        string tag = collision.gameObject.tag;
+        if (tag == "Ground" || tag == "Spike")
         {
             //Debug.Log("HitGround");
             if(transform.position.y > collision.gameObject.transform.position.y)
@@ -97,7 +98,8 @@ public class PlayerMovementHandler : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        string tag = collision.gameObject.tag;
+        if (tag == "Ground" || tag == "Spike")
         {
             canJump = false;
         }

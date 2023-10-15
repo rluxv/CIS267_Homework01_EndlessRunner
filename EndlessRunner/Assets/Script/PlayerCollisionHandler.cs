@@ -22,6 +22,22 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.CompareTag("Spike"))
+        {
+            if(!gm.spikeShieldActive)
+            {
+                GetComponent<PlayerHealth>().takeDamage();
+            }
+            else
+            {
+                gm.spikeShieldHits--;
+                if(gm.spikeShieldHits <= 0)
+                {
+                    gm.spikeShieldActive = false;
+                    transform.Find("SpikeShield").gameObject.SetActive(false);
+                }
+            }
+        }
         if (collision.gameObject.CompareTag("Damager"))
         {
             GetComponent<PlayerHealth>().takeDamage();
@@ -34,6 +50,24 @@ public class PlayerCollisionHandler : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             gm.gameOver();
+        }
+        else if(collision.gameObject.CompareTag("TerrainEndScoreCollider"))
+        {
+            gm.addScore(collision.gameObject.GetComponent<TerrainScoreCollider>().scoreValue);
+            //Destroy the collider object so the player cant go back and get more score for beating a level
+            Destroy(collision.gameObject);
+        }
+        else if(collision.gameObject.CompareTag("SpikeShieldCollectible"))
+        {
+            gm.spikeShieldActive = true;
+            //this means a player can hit a spike 10 times before the spike shield is removed
+            gm.spikeShieldHits = 10;
+            //add some score for getting a collectible
+            gm.addScore(25);
+
+            Destroy(collision.gameObject);
+            transform.Find("SpikeShield").gameObject.SetActive(true);
+
         }
     }
 }
