@@ -5,12 +5,17 @@ using UnityEngine;
 public class TerrainGenerator : MonoBehaviour
 {
     private const float PLAYER_DISTANCE_SPAWN_TERRAIN = 50f;
-    [SerializeField] private Transform terrainStart;
-    [SerializeField] private List<Transform> terrainTList;
-    [SerializeField] private GameObject player;
+    public Transform terrainStart;
+    public List<Transform> terrainEasyList;
+    public List<Transform> terrainMediumList;
+    public List<Transform> terrainHardList;
+    public GameObject gameManagerObj;
+    private GameManager gameManager;
+    public GameObject player;
     private Vector3 lastEndPos;
     void Start()
     {
+        gameManager = gameManagerObj.GetComponent<GameManager>();
         lastEndPos = new Vector3(terrainStart.Find("EndPos").position.x + 10, terrainStart.Find("EndPos").position.y + Random.Range(0, 3));
 
         spawnTerrain();
@@ -31,9 +36,24 @@ public class TerrainGenerator : MonoBehaviour
 
     private void spawnTerrain()
     {
-        Transform terrainToSpawn = terrainTList[Random.Range(0, terrainTList.Count)];
+        if(gameManager.getScore() <= 999)
+        {
+        Transform terrainToSpawn = terrainEasyList[Random.Range(0, terrainEasyList.Count)];
         Transform lastTerrainTFM = spawnTerrain(terrainToSpawn, lastEndPos);
         lastEndPos = new Vector3(lastTerrainTFM.Find("EndPos").position.x + 10, lastTerrainTFM.Find("EndPos").position.y + Random.Range(0, 3));
+        }
+        else if (gameManager.getScore() >= 1000 && gameManager.getScore() <= 2000)
+        {
+            Transform terrainToSpawn = terrainMediumList[Random.Range(0, terrainMediumList.Count)];
+            Transform lastTerrainTFM = spawnTerrain(terrainToSpawn, lastEndPos);
+            lastEndPos = new Vector3(lastTerrainTFM.Find("EndPos").position.x + 10, lastTerrainTFM.Find("EndPos").position.y + Random.Range(0, 3));
+        }
+        else
+        {
+            Transform terrainToSpawn = terrainHardList[Random.Range(0, terrainHardList.Count)];
+            Transform lastTerrainTFM = spawnTerrain(terrainToSpawn, lastEndPos);
+            lastEndPos = new Vector3(lastTerrainTFM.Find("EndPos").position.x + 10, lastTerrainTFM.Find("EndPos").position.y + Random.Range(0, 3));
+        }
     }
 
     private Transform spawnTerrain(Transform terrain, Vector3 position)

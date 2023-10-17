@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject lifebar4;
     public GameObject Canvas;
+    
     public bool isGameOver;
 
     private int score;
@@ -39,8 +40,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        //every minute add 50 points
-        if(timer >= 60)
+        //every 30 seconds add 50 points
+        if(timer >= 30)
         {
             addScore(50);
             timer = 0;
@@ -56,10 +57,16 @@ public class GameManager : MonoBehaviour
         if (num == 2)
         {
             Destroy(lifebar2);
+            SpriteRenderer lbSpriteRender = lifebar1.GetComponent<SpriteRenderer>();
+            lbSpriteRender.color = Color.red;
         }
         if (num == 3)
         {
             Destroy(lifebar3);
+            SpriteRenderer lbSpriteRender = lifebar1.GetComponent<SpriteRenderer>();
+            lbSpriteRender.color = Color.yellow;
+            lbSpriteRender = lifebar2.GetComponent<SpriteRenderer>();
+            lbSpriteRender.color = Color.yellow;
         }
         if (num == 4)
         {
@@ -139,5 +146,10 @@ public class GameManager : MonoBehaviour
     {
         score += sc;
         scoreTMP.text = "Score: " + score;
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 }
