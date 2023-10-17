@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,24 +10,38 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     public GameObject gameManager;
     // Start is called before the first frame update
+    private float noDmgTimer;
+    private bool invincible;
+    public float timeAllowedInvincible;
     void Start()
     {
         gm = gameManager.GetComponent<GameManager>();
+        noDmgTimer = 0;
+        invincible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(invincible)
+        {
+            noDmgTimer += Time.deltaTime;
+            if(noDmgTimer >= timeAllowedInvincible)
+            {
+                invincible = false;
+                noDmgTimer = 0;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Spike"))
+        if(collision.gameObject.CompareTag("Spike") && !invincible)
         {
             if(!gm.spikeShieldActive)
             {
                 GetComponent<PlayerHealth>().takeDamage();
+                invincible = true;
             }
             else
             {

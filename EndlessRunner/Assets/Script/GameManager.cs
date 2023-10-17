@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public bool spikeShieldActive;
     public int spikeShieldHits;
     // Start is called before the first frame update
+    private float timer;
+
     void Start()
     {
         isGameOver = false;
@@ -30,12 +32,19 @@ public class GameManager : MonoBehaviour
         score = 0;
         spikeShieldActive = false;
         spikeShieldHits = 0;
+        timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timer += Time.deltaTime;
+        //every minute add 50 points
+        if(timer >= 60)
+        {
+            addScore(50);
+            timer = 0;
+        }
     }
 
     public void takeHealthBar(int num)

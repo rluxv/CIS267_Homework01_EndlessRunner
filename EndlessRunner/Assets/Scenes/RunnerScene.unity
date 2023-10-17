@@ -1392,6 +1392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1264586569}
+  timeAllowedInvincible: 3
 --- !u!114 &1140767206
 MonoBehaviour:
   m_ObjectHideFlags: 0
