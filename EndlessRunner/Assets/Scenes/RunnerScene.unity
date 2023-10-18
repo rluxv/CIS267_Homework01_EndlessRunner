@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017bb0e7139120d9896c6db042742e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallMovementSpeed: 0.1
+  wallMovementSpeed: 0.12
   player: {fileID: 1140767199}
 --- !u!1 &544734171
 GameObject:
@@ -1611,6 +1611,7 @@ MonoBehaviour:
   lifebar4: {fileID: 950370859}
   Canvas: {fileID: 544734171}
   isGameOver: 0
+  score: 0
   scoreTMP: {fileID: 2085946905}
   spikeShieldActive: 0
   spikeShieldHits: 0
@@ -1652,9 +1653,11 @@ MonoBehaviour:
   terrainMediumList:
   - {fileID: 6718313707735750941, guid: bdee48f3f4cab3b4aa5e88257f63ae6a, type: 3}
   - {fileID: 235494195418581062, guid: 8bbbe129c43a44f4ca0aac9bf9411aee, type: 3}
+  - {fileID: 235494195418581062, guid: 1914d626e02925a419e5a49ec3a8095a, type: 3}
   terrainHardList:
   - {fileID: 235494195418581062, guid: 8bbbe129c43a44f4ca0aac9bf9411aee, type: 3}
   - {fileID: 235494195418581062, guid: 963038b741c3746478e2d38a445ab9aa, type: 3}
+  - {fileID: 235494195418581062, guid: 1914d626e02925a419e5a49ec3a8095a, type: 3}
   gameManagerObj: {fileID: 1264586569}
   player: {fileID: 1140767199}
 --- !u!1 &1312695059

@@ -89,6 +89,7 @@ public class PlayerCollisionHandler : MonoBehaviour
             Time.timeScale = Random.Range(0.5f, 2f);
             gm.clockCollectableActive = true;
             gm.clockCollectableTimer = Random.Range(10, 40);
+            gm.addScore(35);
             Destroy(collision.gameObject);
         }
     }

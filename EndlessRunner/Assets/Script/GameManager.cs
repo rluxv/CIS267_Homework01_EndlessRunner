@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     
     public bool isGameOver;
 
-    private int score;
+    [SerializeField] [Tooltip("Only use for debug purposes")] private int score;
     public TMP_Text scoreTMP;
 
     //Spike Shield
@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = false;
         evalGameState();
-        score = 0;
         spikeShieldActive = false;
         spikeShieldHits = 0;
         timer = 0;

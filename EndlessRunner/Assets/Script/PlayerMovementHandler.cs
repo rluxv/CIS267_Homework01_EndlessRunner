@@ -85,23 +85,30 @@ public class PlayerMovementHandler : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         string tag = collision.gameObject.tag;
-        if (tag == "Ground" || tag == "Spike")
+        if (tag == "Ground" || tag == "Spike" || tag == "MovingGround")
         {
             //Debug.Log("HitGround");
             if(transform.position.y > collision.gameObject.transform.position.y)
             {
                 canJump = true;
             }
-            
+            if(tag == "MovingGround")
+            {
+                transform.parent = collision.transform;
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         string tag = collision.gameObject.tag;
-        if (tag == "Ground" || tag == "Spike")
+        if (tag == "Ground" || tag == "Spike" || tag == "MovingGround")
         {
             canJump = false;
+            if (tag == "MovingGround")
+            {
+                transform.parent = null;
+            }
         }
     }
 }
