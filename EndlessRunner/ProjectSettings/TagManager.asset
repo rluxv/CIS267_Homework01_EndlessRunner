@@ -12,6 +12,7 @@ TagManager:
   - Spike
   - TerrainEndScoreCollider
   - SpikeShieldCollectible
+  - ClockCollectable
   layers:
   - Default
   - TransparentFX

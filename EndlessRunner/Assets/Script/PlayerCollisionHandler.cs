@@ -84,5 +84,12 @@ public class PlayerCollisionHandler : MonoBehaviour
             transform.Find("SpikeShield").gameObject.SetActive(true);
 
         }
+        else if(collision.gameObject.CompareTag("ClockCollectable"))
+        {
+            Time.timeScale = Random.Range(0.5f, 2f);
+            gm.clockCollectableActive = true;
+            gm.clockCollectableTimer = Random.Range(10, 40);
+            Destroy(collision.gameObject);
+        }
     }
 }

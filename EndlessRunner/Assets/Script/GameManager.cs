@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private float timer;
 
+    public bool clockCollectableActive;
+    public float clockCollectableTimer;
+
     void Start()
     {
         isGameOver = false;
@@ -34,6 +37,8 @@ public class GameManager : MonoBehaviour
         spikeShieldActive = false;
         spikeShieldHits = 0;
         timer = 0;
+        clockCollectableActive = false;
+        clockCollectableTimer = 0;
     }
 
     // Update is called once per frame
@@ -45,6 +50,16 @@ public class GameManager : MonoBehaviour
         {
             addScore(50);
             timer = 0;
+        }
+
+        if(clockCollectableActive)
+        {
+            clockCollectableTimer -= Time.deltaTime;
+            if(clockCollectableTimer <= 0)
+            {
+                clockCollectableActive = false;
+                Time.timeScale = 1f;
+            }
         }
     }
 
