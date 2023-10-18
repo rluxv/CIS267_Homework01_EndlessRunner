@@ -1653,7 +1653,7 @@ MonoBehaviour:
   terrainHardList:
   - {fileID: 235494195418581062, guid: 8bbbe129c43a44f4ca0aac9bf9411aee, type: 3}
   - {fileID: 235494195418581062, guid: 963038b741c3746478e2d38a445ab9aa, type: 3}
-  gameManagerObj: {fileID: 0}
+  gameManagerObj: {fileID: 1264586569}
   player: {fileID: 1140767199}
 --- !u!1 &1312695059
 GameObject:
