@@ -24,7 +24,7 @@ public class WallManager : MonoBehaviour
         if (seconds >= 4)
         {
             wallRigidBody.transform.Translate(transform.right * wallMovementSpeed);
-            transform.position = new Vector3(transform.position.x, player.transform.position.y);
+            //transform.position = new Vector3(transform.position.x, player.transform.position.y);
         }
 
         
