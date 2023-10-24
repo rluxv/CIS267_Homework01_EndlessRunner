@@ -86,8 +86,5 @@ public class MainMenu : MonoBehaviour
     {
         transform.Find("HighScores").gameObject.SetActive(false);
         transform.Find("MainMenu").gameObject.SetActive(true);
-
-
-
     }
 }

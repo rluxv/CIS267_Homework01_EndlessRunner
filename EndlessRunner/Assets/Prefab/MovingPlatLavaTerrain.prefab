@@ -979,6 +979,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6089661611840299103}
     m_Modifications:
+    - target: {fileID: 460320149021488901, guid: ef8b18fe82d6a784e87c9666ec6b341a, type: 3}
+      propertyPath: scoreValue
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2135722387069959758, guid: ef8b18fe82d6a784e87c9666ec6b341a, type: 3}
       propertyPath: m_Name
       value: TerrainEndScoreCollider

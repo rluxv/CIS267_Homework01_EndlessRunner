@@ -22,6 +22,7 @@ public class ObjectDestroyer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // we need to make sure we don't destroy the wall object otherwise the game will be broken
         if(!collision.gameObject.CompareTag("Wall"))
         {
             Destroy(collision.gameObject);

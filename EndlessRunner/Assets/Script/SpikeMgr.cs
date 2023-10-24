@@ -18,14 +18,18 @@ public class SpikeMgr : MonoBehaviour
         spikeShowing = false;
         startLocX = transform.position.x;
         startLocY = transform.position.y;
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        moveSpike();
+    }
+
+    public void moveSpike()
+    {
         timer += Time.deltaTime;
-        if(timer >= timeSpikeHiding && !spikeShowing)
+        if (timer >= timeSpikeHiding && !spikeShowing)
         {
             transform.position = new Vector3(transform.position.x, (float)(transform.position.y + 0.7));
             spikeShowing = true;

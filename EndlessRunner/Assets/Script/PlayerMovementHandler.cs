@@ -43,21 +43,23 @@ public class PlayerMovementHandler : MonoBehaviour
     {
         playerRigidBody.velocity = new Vector2(horizontalInput * movementSpeed, playerRigidBody.velocity.y);
         //move the boundary with the player
-
-        
         if((jumping && jumpTime < maxJumpVal) || jumpTime < minJumpVal)
         {
             playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, jumpForce);
             jumpTime++;
         }
-
     }
 
     // Update is called once per frame
     void Update()
     {
         coffee();
-        if(gameManager.playerCanMove)
+        movePlayer();
+    }
+
+    public void movePlayer()
+    {
+        if (gameManager.playerCanMove)
         {
             //Using GetAxis instead of GetAxisRaw, the player movement is a bit improved, the player will gain speed over time.
             horizontalInput = Input.GetAxis("Horizontal");
@@ -73,7 +75,6 @@ public class PlayerMovementHandler : MonoBehaviour
                 }
             }
 
-
             if (Input.GetKey(KeyCode.Space) && jumping)
             {
                 jumping = true;
@@ -85,7 +86,6 @@ public class PlayerMovementHandler : MonoBehaviour
                 jumpTime = 0;
             }
         }
-        
     }
 
     public void flipPlayer()
@@ -115,7 +115,6 @@ public class PlayerMovementHandler : MonoBehaviour
                 transform.parent = collision.transform;
             }
         }
-
         if (tag == "Spike") canJump = true;
     }
 
@@ -144,7 +143,6 @@ public class PlayerMovementHandler : MonoBehaviour
                 coffeeTimer = coffeeCrashTime;
                 isCoffee = false;
             }
-            
         }
         else if (isCoffeeCrash)
         {
@@ -155,7 +153,6 @@ public class PlayerMovementHandler : MonoBehaviour
                 isCoffeeCrash = false;
             }
         }
-
     }
 
     public void startCoffee()
@@ -181,7 +178,5 @@ public class PlayerMovementHandler : MonoBehaviour
             movementSpeed = coffeeSpeed;
             isCoffee = true;
         }
-        
-        
     }
 }

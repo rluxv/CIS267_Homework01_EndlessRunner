@@ -1877,6 +1877,7 @@ MonoBehaviour:
   - {fileID: 6718313707735750941, guid: bdee48f3f4cab3b4aa5e88257f63ae6a, type: 3}
   - {fileID: 235494195418581062, guid: 8bbbe129c43a44f4ca0aac9bf9411aee, type: 3}
   - {fileID: 235494195418581062, guid: 1914d626e02925a419e5a49ec3a8095a, type: 3}
+  - {fileID: 6089661611840299103, guid: b7529c3fc2c0e6544be789adad997d95, type: 3}
   terrainHardList:
   - {fileID: 235494195418581062, guid: 8bbbe129c43a44f4ca0aac9bf9411aee, type: 3}
   - {fileID: 235494195418581062, guid: 963038b741c3746478e2d38a445ab9aa, type: 3}

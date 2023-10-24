@@ -18,10 +18,9 @@ public class MovingPlatform : MonoBehaviour
     public bool moveUp;
     void Start()
     {
+        //we need to save the starting position so we know how far to go
         startPosX = transform.position.x;
         startPosY = transform.position.y;
-        //moveUp = true;
-        //moveLeft = true;
     }
 
     // Update is called once per frame

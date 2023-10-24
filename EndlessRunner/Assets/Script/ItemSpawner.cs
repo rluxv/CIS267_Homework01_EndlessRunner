@@ -14,5 +14,6 @@ public class ItemSpawner : MonoBehaviour
     public void spawnItem()
     {
         Instantiate(items[Random.Range(0, items.Count)], transform.position, transform.rotation);
+        Destroy(this.gameObject);
     }
 }

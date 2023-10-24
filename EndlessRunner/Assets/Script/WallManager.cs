@@ -10,30 +10,42 @@ public class WallManager : MonoBehaviour
     public GameObject player;
     float timer = 0.0f;
     int seconds;
+    private bool wallMoving;
     // Start is called before the first frame update
     void Start()
     {
         wallRigidBody = GetComponent<Rigidbody2D>();
+        wallMoving = false;
     }
 
     private void FixedUpdate()
     {
-        //Debug.Log("Time: " + time);
-        // wait a few seconds before moving the wall
-        // this will also be used to increase the wall speed as time goes on
-        if (seconds >= 4)
-        {
-            wallRigidBody.transform.Translate(transform.right * wallMovementSpeed);
-            //transform.position = new Vector3(transform.position.x, player.transform.position.y);
-        }
-
-        
+        moveWall();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        seconds = (int)(timer % 60);
+
+        timerTick();
+    }
+
+    public void moveWall()
+    {
+        // wait a few seconds before moving the wall
+        if (seconds >= 4)
+        {
+            wallMoving = true;
+            wallRigidBody.transform.Translate(transform.right * wallMovementSpeed);
+        }
+    }
+
+    public void timerTick()
+    {
+        if(!wallMoving)
+        {
+            timer += Time.deltaTime;
+            seconds = (int)(timer % 60);
+        }
     }
 }

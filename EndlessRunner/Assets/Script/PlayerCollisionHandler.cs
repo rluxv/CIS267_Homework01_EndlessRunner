@@ -23,10 +23,15 @@ public class PlayerCollisionHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(invincible)
+        invincibility();
+    }
+
+    public void invincibility()
+    {
+        if (invincible)
         {
             noDmgTimer += Time.deltaTime;
-            if(noDmgTimer >= timeAllowedInvincible)
+            if (noDmgTimer >= timeAllowedInvincible)
             {
                 invincible = false;
                 noDmgTimer = 0;
@@ -76,7 +81,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // we assign the wall tag to the water below the player as well
+        // we assign the wall tag to the boundary below the player as well
         if (collision.gameObject.CompareTag("Wall"))
         {
             gm.gameOver();

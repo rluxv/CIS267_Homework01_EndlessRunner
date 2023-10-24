@@ -18,9 +18,14 @@ public class CountdownTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        countdownTimer();
+    }
+
+    public void countdownTimer()
+    {
         timer -= Time.deltaTime;
         int time = (int)timer;
-        if(timer >= 4.0)
+        if (timer >= 4.0)
         {
             guiCountdownTimer.SetText("");
         }
@@ -28,14 +33,15 @@ public class CountdownTimer : MonoBehaviour
         {
             guiCountdownTimer.SetText(time + "");
         }
-        if(timer < 1)
+        if (timer < 1)
         {
             guiCountdownTimer.SetText("GO!");
+            //Unfreeze the player as soon as they see the "GO!" message
             GameManager.GetComponent<GameManager>().playerCanMove = true;
         }
-        if(timer < 0.7)
+        if (timer < 0.7)
         {
-            
+
             guiCountdownTimer.SetText("");
             Destroy(this);
         }

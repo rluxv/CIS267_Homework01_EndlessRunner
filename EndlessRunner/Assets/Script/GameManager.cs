@@ -44,22 +44,30 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        //every 30 seconds add 50 points
-        if(timer >= 30)
-        {
-            addScore(50);
-            timer = 0;
-        }
+        scoreTimer();
+        clockCollectable();
+    }
 
-        if(clockCollectableActive)
+    public void clockCollectable()
+    {
+        if (clockCollectableActive)
         {
             clockCollectableTimer -= Time.deltaTime;
-            if(clockCollectableTimer <= 0)
+            if (clockCollectableTimer <= 0)
             {
                 clockCollectableActive = false;
                 Time.timeScale = 1f;
             }
+        }
+    }
+    public void scoreTimer()
+    {
+        timer += Time.deltaTime;
+        //every 30 seconds add 50 points
+        if (timer >= 30)
+        {
+            addScore(50);
+            timer = 0;
         }
     }
 

@@ -16,12 +16,6 @@ public class PlayerHealth : MonoBehaviour
         gm = gameManager.GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void takeDamage()
     {
         if(playerHealth == 6)

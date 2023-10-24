@@ -18,6 +18,7 @@ public class TerrainGenerator : MonoBehaviour
         gameManager = gameManagerObj.GetComponent<GameManager>();
         lastEndPos = new Vector3(terrainStart.Find("EndPos").position.x + 10, terrainStart.Find("EndPos").position.y + Random.Range(0, 3));
 
+        //Spawn some new terrain right when the game starts
         spawnTerrain();
         spawnTerrain();
         spawnTerrain();
@@ -31,11 +32,11 @@ public class TerrainGenerator : MonoBehaviour
         {
             spawnTerrain();
         }
-
     }
 
     private void spawnTerrain()
     {
+        //Make the terrain harder depending on player score
         if(gameManager.getScore() <= 999)
         {
         Transform terrainToSpawn = terrainEasyList[Random.Range(0, terrainEasyList.Count)];
