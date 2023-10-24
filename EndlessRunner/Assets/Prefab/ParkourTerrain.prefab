@@ -305,9 +305,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.57
       objectReference: {fileID: 0}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -375,9 +387,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 7.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -445,9 +469,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.57
       objectReference: {fileID: 0}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -515,9 +551,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.57
       objectReference: {fileID: 0}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -585,9 +633,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 7.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -717,9 +777,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.57
       objectReference: {fileID: 0}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -787,9 +859,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.57
       objectReference: {fileID: 0}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -857,9 +941,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.57
       objectReference: {fileID: 0}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 5314930002008693565, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694221580525086685, guid: 43ba4826c9156a944b21f4680c351b33, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

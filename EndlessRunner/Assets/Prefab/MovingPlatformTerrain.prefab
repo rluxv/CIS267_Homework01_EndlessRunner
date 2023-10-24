@@ -261,6 +261,18 @@ PrefabInstance:
       propertyPath: moveLeft
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1928799373356944286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147453277317052286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 3147453277317052286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4876761789013955203, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.36
@@ -337,6 +349,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 742437668180164271, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
       propertyPath: movementDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928799373356944286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147453277317052286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 3147453277317052286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_SpriteTileMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4876761789013955203, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
@@ -479,6 +503,18 @@ PrefabInstance:
       propertyPath: movementDirection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1928799373356944286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147453277317052286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 3147453277317052286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4876761789013955203, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.31
@@ -547,6 +583,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 742437668180164271, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
       propertyPath: moveLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928799373356944286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147453277317052286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 575e8e5b2886ef54383174566a214674, type: 3}
+    - target: {fileID: 3147453277317052286, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
+      propertyPath: m_SpriteTileMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4876761789013955203, guid: fab96427ffaa4b141800cd1c6d94629f, type: 3}
