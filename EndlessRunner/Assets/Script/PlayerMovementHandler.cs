@@ -97,12 +97,14 @@ public class PlayerMovementHandler : MonoBehaviour
                 transform.parent = collision.transform;
             }
         }
+
+        if (tag == "Spike") canJump = true;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         string tag = collision.gameObject.tag;
-        if (tag == "Ground" || tag == "Spike" || tag == "MovingGround" || tag == "Lavablock")
+        if (tag == "Ground" || tag == "MovingGround" || tag == "Lavablock")
         {
             canJump = false;
             if (tag == "MovingGround")
