@@ -53,6 +53,24 @@ public class PlayerCollisionHandler : MonoBehaviour
                 }
             }
         }
+        else if (collision.gameObject.CompareTag("Lavablock") && !invincible)
+        {
+            if (!gm.spikeShieldActive)
+            {
+                GetComponent<PlayerHealth>().takeDamage();
+                GetComponent<PlayerHealth>().takeDamage();
+                invincible = true;
+            }
+            else
+            {
+                gm.spikeShieldHits--;
+                if (gm.spikeShieldHits <= 0)
+                {
+                    gm.spikeShieldActive = false;
+                    transform.Find("SpikeShield").gameObject.SetActive(false);
+                }
+            }
+        }
         if (collision.gameObject.CompareTag("Damager"))
         {
             GetComponent<PlayerHealth>().takeDamage();

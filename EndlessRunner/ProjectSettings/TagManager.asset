@@ -14,6 +14,7 @@ TagManager:
   - SpikeShieldCollectible
   - ClockCollectable
   - MovingGround
+  - Lavablock
   layers:
   - Default
   - TransparentFX
