@@ -1952,6 +1952,7 @@ MonoBehaviour:
   - {fileID: 235494195418581062, guid: 963038b741c3746478e2d38a445ab9aa, type: 3}
   - {fileID: 235494195418581062, guid: 1914d626e02925a419e5a49ec3a8095a, type: 3}
   - {fileID: 6089661611840299103, guid: b7529c3fc2c0e6544be789adad997d95, type: 3}
+  - {fileID: 6089661611840299103, guid: 3dc0d0f451a3da144bcbb72432b0f0f8, type: 3}
   gameManagerObj: {fileID: 1264586569}
   player: {fileID: 1140767199}
   boostTerrain: {fileID: 6089661611840299103, guid: f0b1964d27a71c24bafc600b29b97064, type: 3}
