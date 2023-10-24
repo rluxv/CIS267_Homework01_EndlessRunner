@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 490214882}
   - component: {fileID: 490214881}
   m_Layer: 0
-  m_Name: demo02_PixelSky_1920x1080
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
