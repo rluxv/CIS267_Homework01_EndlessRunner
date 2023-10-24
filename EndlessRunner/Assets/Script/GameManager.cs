@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject lifebar1;
-
     public GameObject lifebar2;
-
     public GameObject lifebar3;
-
     public GameObject lifebar4;
+    public GameObject lifebar5;
+    public GameObject lifebar6;
+
     public GameObject Canvas;
     
     public bool isGameOver;
@@ -78,14 +78,24 @@ public class GameManager : MonoBehaviour
         if (num == 3)
         {
             Destroy(lifebar3);
-            SpriteRenderer lbSpriteRender = lifebar1.GetComponent<SpriteRenderer>();
-            lbSpriteRender.color = Color.yellow;
-            lbSpriteRender = lifebar2.GetComponent<SpriteRenderer>();
-            lbSpriteRender.color = Color.yellow;
         }
         if (num == 4)
         {
             Destroy(lifebar4);
+            SpriteRenderer lbSpriteRender = lifebar1.GetComponent<SpriteRenderer>();
+            lbSpriteRender.color = Color.yellow;
+            lbSpriteRender = lifebar2.GetComponent<SpriteRenderer>();
+            lbSpriteRender.color = Color.yellow;
+            lbSpriteRender = lifebar3.GetComponent<SpriteRenderer>();
+            lbSpriteRender.color = Color.yellow;
+        }
+        if(num == 5)
+        {
+            Destroy(lifebar5);
+        }
+        if (num == 6)
+        {
+            Destroy(lifebar6);
         }
     }
 

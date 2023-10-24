@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = 4;
+        playerHealth = 6;
         gm = gameManager.GetComponent<GameManager>();
     }
 
@@ -24,7 +24,17 @@ public class PlayerHealth : MonoBehaviour
 
     public void takeDamage()
     {
-        if(playerHealth == 4)
+        if(playerHealth == 6)
+        {
+            playerHealth--;
+            gm.takeHealthBar(6);
+        }
+        else if(playerHealth == 5)
+        {
+            playerHealth--;
+            gm.takeHealthBar(5);
+        }
+        else if(playerHealth == 4)
         {
             playerHealth--;
             gm.takeHealthBar(4);
