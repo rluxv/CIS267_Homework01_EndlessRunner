@@ -201,14 +201,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &193854922
-Transform:
+--- !u!224 &193854922
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193854919}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -223,6 +222,11 @@ Transform:
   - {fileID: 1113708679}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193854923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1885,6 +1889,7 @@ MonoBehaviour:
   - {fileID: 6089661611840299103, guid: b7529c3fc2c0e6544be789adad997d95, type: 3}
   gameManagerObj: {fileID: 1264586569}
   player: {fileID: 1140767199}
+  boostTerrain: {fileID: 6089661611840299103, guid: f0b1964d27a71c24bafc600b29b97064, type: 3}
 --- !u!1 &1312695059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,7 +3560,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 193854922}
   - {fileID: 1140767203}
   - {fileID: 1264586571}
   - {fileID: 425917669}
@@ -3564,3 +3568,4 @@ SceneRoots:
   - {fileID: 1826863095}
   - {fileID: 8495510510581981094}
   - {fileID: 1678851764}
+  - {fileID: 193854922}
