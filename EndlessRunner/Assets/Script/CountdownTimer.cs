@@ -9,6 +9,7 @@ public class CountdownTimer : MonoBehaviour
     // Start is called before the first frame update
     float timer = 5.0f;
     private TMP_Text guiCountdownTimer;
+    public GameObject GameManager;
     void Start()
     {
         guiCountdownTimer = GetComponent<TMP_Text>();
@@ -30,9 +31,11 @@ public class CountdownTimer : MonoBehaviour
         if(timer < 1)
         {
             guiCountdownTimer.SetText("GO!");
+            GameManager.GetComponent<GameManager>().playerCanMove = true;
         }
         if(timer < 0.7)
         {
+            
             guiCountdownTimer.SetText("");
             Destroy(this);
         }

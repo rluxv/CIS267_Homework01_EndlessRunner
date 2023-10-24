@@ -14,7 +14,8 @@ public class PlayerMovementHandler : MonoBehaviour
     public int minJumpVal;
     public int maxJumpVal;
     private bool canJump;
-
+    public GameObject gameManagerObject;
+    private GameManager gameManager;
     public float movementSpeed;
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class PlayerMovementHandler : MonoBehaviour
         playerRigidBody = GetComponent<Rigidbody2D>();
         jumping = false;
         canJump = true;
+        gameManager = gameManagerObject.GetComponent<GameManager>();
     }
 
     //FixedUpdate is used for physics
@@ -43,31 +45,35 @@ public class PlayerMovementHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Using GetAxis instead of GetAxisRaw, the player movement is a bit improved, the player will gain speed over time.
-        horizontalInput = Input.GetAxis("Horizontal");
-        flipPlayer();
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(gameManager.playerCanMove)
         {
-            //Debug.Log("Pressed Space");
-            if (canJump)
+            //Using GetAxis instead of GetAxisRaw, the player movement is a bit improved, the player will gain speed over time.
+            horizontalInput = Input.GetAxis("Horizontal");
+            flipPlayer();
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //Debug.Log("Pressed Space");
+                if (canJump)
+                {
+                    jumping = true;
+                    canJump = false;
+                }
+            }
+
+
+            if (Input.GetKey(KeyCode.Space) && jumping)
             {
                 jumping = true;
-                canJump = false;
+                //Debug.Log("Holding down space");
+            }
+            else
+            {
+                jumping = false;
+                jumpTime = 0;
             }
         }
         
-        
-        if (Input.GetKey(KeyCode.Space) && jumping)
-        {
-            jumping = true;
-            //Debug.Log("Holding down space");
-        }
-        else
-        {
-            jumping = false;
-            jumpTime = 0;
-        }
     }
 
     public void flipPlayer()

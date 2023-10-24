@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public bool clockCollectableActive;
     public float clockCollectableTimer;
-
+    public bool playerCanMove;
     void Start()
     {
         isGameOver = false;
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         timer = 0;
         clockCollectableActive = false;
         clockCollectableTimer = 0;
+        playerCanMove = false;
     }
 
     // Update is called once per frame

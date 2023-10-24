@@ -63,12 +63,9 @@ public class PlayerCollisionHandler : MonoBehaviour
             }
             else
             {
-                gm.spikeShieldHits--;
-                if (gm.spikeShieldHits <= 0)
-                {
-                    gm.spikeShieldActive = false;
-                    transform.Find("SpikeShield").gameObject.SetActive(false);
-                }
+                GetComponent<PlayerHealth>().takeDamage();
+                gm.spikeShieldActive = false;
+                transform.Find("SpikeShield").gameObject.SetActive(false);
             }
         }
         if (collision.gameObject.CompareTag("Damager"))
