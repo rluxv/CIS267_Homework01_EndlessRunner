@@ -17,6 +17,14 @@ public class PlayerMovementHandler : MonoBehaviour
     public GameObject gameManagerObject;
     private GameManager gameManager;
     public float movementSpeed;
+    private float originalSpeed;
+    public float coffeeSpeed;
+    public float coffeeCrashSpeed;
+    private float coffeeTimer;
+    public float coffeeTime;
+    public float coffeeCrashTime;
+    private bool isCoffee;
+    private bool isCoffeeCrash;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +33,9 @@ public class PlayerMovementHandler : MonoBehaviour
         jumping = false;
         canJump = true;
         gameManager = gameManagerObject.GetComponent<GameManager>();
+        originalSpeed = movementSpeed;
+        isCoffee = false;
+        isCoffeeCrash = false;
     }
 
     //FixedUpdate is used for physics
@@ -45,6 +56,7 @@ public class PlayerMovementHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        coffee();
         if(gameManager.playerCanMove)
         {
             //Using GetAxis instead of GetAxisRaw, the player movement is a bit improved, the player will gain speed over time.
@@ -118,5 +130,58 @@ public class PlayerMovementHandler : MonoBehaviour
                 transform.parent = null;
             }
         }
+    }
+
+    public void coffee()
+    {
+        if(isCoffee)
+        {
+            coffeeTimer -= Time.deltaTime;
+            if (coffeeTimer <= 0)
+            {
+                movementSpeed = coffeeCrashSpeed;
+                isCoffeeCrash = true;
+                coffeeTimer = coffeeCrashTime;
+                isCoffee = false;
+            }
+            
+        }
+        else if (isCoffeeCrash)
+        {
+            coffeeTimer -= Time.deltaTime;
+            if (coffeeTimer <= 0)
+            {
+                movementSpeed = originalSpeed;
+                isCoffeeCrash = false;
+            }
+        }
+
+    }
+
+    public void startCoffee()
+    {
+        //if coffee powerup already reset the timer
+        if (isCoffee)
+        {
+            coffeeTimer = coffeeTime;
+            movementSpeed = coffeeSpeed;
+            isCoffee = true;
+        }
+        //If in coffee crash, ignore coffee crash and reset everything
+        else if(isCoffeeCrash)
+        {
+            isCoffeeCrash = false;
+            isCoffee = true;
+            movementSpeed = coffeeSpeed;
+        }
+        // else start coffee
+        else
+        {
+            coffeeTimer = coffeeTime;
+            movementSpeed = coffeeSpeed;
+            isCoffee = true;
+        }
+        
+        
     }
 }

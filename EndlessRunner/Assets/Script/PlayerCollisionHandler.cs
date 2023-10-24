@@ -107,5 +107,11 @@ public class PlayerCollisionHandler : MonoBehaviour
             gm.addScore(35);
             Destroy(collision.gameObject);
         }
+        else if(collision.gameObject.CompareTag("coffee"))
+        {
+            GetComponent<PlayerMovementHandler>().startCoffee();
+            Destroy(collision.gameObject);
+            gm.addScore(20);
+        }
     }
 }

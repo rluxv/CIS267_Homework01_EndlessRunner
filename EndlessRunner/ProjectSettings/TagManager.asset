@@ -15,6 +15,7 @@ TagManager:
   - ClockCollectable
   - MovingGround
   - Lavablock
+  - coffee
   layers:
   - Default
   - TransparentFX
